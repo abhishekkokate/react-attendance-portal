@@ -4,6 +4,7 @@ import "../assets/styles/landing.css";
 import { useLoading } from "../contexts/LoadingContext";
 
 const Landing = () => {
+  // Etc
   const { isLoading, setIsLoading } = useLoading();
   return (
     <div className="container-main landing-container center-a-container">

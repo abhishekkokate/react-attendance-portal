@@ -7,14 +7,14 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const navigate = useNavigate();
-
+  // States and Variables
   const [loginDetails, setLoginDetails] = useState({
     email: "",
     password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
 
+  // Functions
   const handleDetailsChange = _.debounce((e) => {
     setLoginDetails((prevVal) => ({
       ...prevVal,
@@ -35,6 +35,10 @@ const Login = () => {
     toast.success("Login Successfull!");
     navigate("/home");
   }, 600);
+
+  // Etc
+  const navigate = useNavigate();
+
   return (
     <div className="container-main center-a-container">
       <img className="page-main-svg" src={loginSvg} alt="login" />

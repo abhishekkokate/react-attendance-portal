@@ -4,10 +4,12 @@ import { useState, useRef } from "react";
 import checkCircle from "../assets/icons/circle-check-solid.svg";
 
 const Calender = () => {
+  // States and Variables
   const disabledDays = [0, 6];
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [attendedToday, setAttendedToday] = useState(false);
-  const calendar = useRef();
+
+  // Functions
   const convertToDate = (date) => {
     try {
       date = date.toISOString(); //'2024-03-24T13:20:31.715Z'
@@ -17,6 +19,10 @@ const Calender = () => {
     }
     return date;
   };
+
+  // Etc
+  const calendar = useRef();
+
   return (
     <div className="container-main calender-container">
       <div className="calender-wrapper">
