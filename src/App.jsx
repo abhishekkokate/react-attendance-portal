@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home";
-import Navbar from "./Layouts/Navbar";
-import Footer from "./Layouts/Footer";
-import NotFound from "./Pages/NotFound";
-import Calender from "./Pages/Calender";
-import Landing from "./Pages/Landing";
-import Login from "./Pages/Login";
+import Home from "./pages/Home";
+import Navbar from "./layouts/Navbar";
+import Footer from "./layouts/Footer";
+import NotFound from "./pages/NotFound";
+import Calender from "./pages/Calender";
+import Landing from "./pages/Landing";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
