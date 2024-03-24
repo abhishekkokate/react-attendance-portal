@@ -1,0 +1,27 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #fff5; */
+  box-shadow: 0 0 5px 1px #1b1a1a;
+  padding: 0.5rem 2rem;
+  background-color: #1b1a1a;
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 30px;
+  padding: 0.25rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.25rem;
+}
