@@ -12,7 +12,10 @@ const Navbar = () => {
         </Link>
         <div className="navbar-links">
           <Link to="/home">Home</Link>
-          <Link to="/calender">Calender</Link>
+          <Link to="/home/calender">Calender</Link>
+          <Link to="/login" className="btn-primary is-link">
+            Login
+          </Link>
         </div>
       </div>
     </>

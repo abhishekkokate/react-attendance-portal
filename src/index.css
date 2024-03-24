@@ -58,16 +58,6 @@ button {
   transition: border-color 0.25s;
 }
 
-.btn-primary {
-  color: var(--color-text-light);
-  background: var(--color-primary);
-}
-
-.btn-primary:hover {
-  color: var(--color-text-light);
-  background: var(--color-secondary) !important;
-}
-
 button:hover {
   border-color: #646cff;
 }
@@ -248,8 +238,23 @@ img {
   max-height: 100%;
 }
 
+.btn-primary {
+  color: var(--color-text-light);
+  background: var(--color-primary);
+}
+
+.btn-primary:hover {
+  color: var(--color-text-light);
+  background: var(--color-secondary) !important;
+}
+
+.is-link {
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
 .container-main {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 .center-a-container {
@@ -265,4 +270,10 @@ img {
   width: 100%;
   height: fit-content;
   max-width: 200px;
+}
+
+.page-main-svg.main-svg-bg {
+  background: #131313be;
+  padding: 2rem;
+  max-width: 250px;
 }
