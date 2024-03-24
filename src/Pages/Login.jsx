@@ -13,6 +13,7 @@ const Login = () => {
     password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
+  const [disableLogin, setDisableLogin] = useState(false);
 
   // Functions
   const handleDetailsChange = _.debounce((e) => {
@@ -20,6 +21,7 @@ const Login = () => {
       ...prevVal,
       [e.target.name]: e.target.value,
     }));
+    setDisableLogin(false);
   }, 500);
 
   const handleLogin = _.debounce((e) => {
@@ -47,13 +49,19 @@ const Login = () => {
           name="email"
           type="text"
           placeholder="Email"
-          onChange={handleDetailsChange}
+          onChange={(e) => {
+            setDisableLogin(true);
+            handleDetailsChange(e);
+          }}
         />
         <input
           name="password"
           type={(showPassword && "text") || "password"}
           placeholder="password"
-          onChange={handleDetailsChange}
+          onChange={(e) => {
+            setDisableLogin(true);
+            handleDetailsChange(e);
+          }}
         />
         <p className="login-show-pass">
           show password{" "}
@@ -63,7 +71,11 @@ const Login = () => {
             onChange={() => setShowPassword((prevVal) => !prevVal)}
           />
         </p>
-        <button className="btn-primary" onClick={handleLogin}>
+        <button
+          className="btn-primary"
+          onClick={handleLogin}
+          disabled={disableLogin}
+        >
           Login
         </button>
       </div>
