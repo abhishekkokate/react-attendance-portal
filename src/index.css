@@ -19,7 +19,7 @@
   --color-primary: #6c63ff;
   --color-secondary: #5c54d9;
   --color-text-light: #fff;
-  --color-dark-100: #131313dd;
+  --color-dark-100: #1a1a1ab7;
   --color-dark-400: #1a1a1a;
   --border-radius: 5px;
 }
@@ -53,7 +53,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1ab7;
+  background-color: var(--color-dark-100);
   cursor: pointer;
   transition: border-color 0.25s;
 }

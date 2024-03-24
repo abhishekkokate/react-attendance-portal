@@ -1,0 +1,81 @@
+.calender-wrapper {
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.calender-selector-date {
+  background: var(--color-dark-100);
+  padding: 0.25rem;
+  height: 3rem;
+}
+
+.labels-wrapper > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.25rem;
+}
+
+.calender-selector-date.date-label {
+  border: 1px solid #fff !important;
+}
+
+.active-date {
+  background: var(--color-secondary) !important;
+  border: 1px solid #fff;
+}
+
+.calender-selector-date.success {
+  border: 1px solid #fff1;
+  background: rgba(0, 128, 0, 0.5);
+}
+.calender-selector-date.failed {
+  border: 1px solid #fff1;
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.calender-labels {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 800px;
+  gap: 1rem;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.labels-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.calender-labels .calender-selector-date {
+  display: inline-block;
+  width: 35px;
+  height: 25px;
+}
+
+@media (max-width: 370px) {
+  .labels-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.calender-mark-today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: auto;
+  width: fit-content;
+}
+
+.checked-green {
+  color: green;
+  width: 25px;
+}
