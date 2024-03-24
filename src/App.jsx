@@ -7,11 +7,19 @@ import Calender from "./pages/Calender";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import { useLoading } from "./contexts/LoadingContext";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const { isLoading } = useLoading();
   return (
     <>
+      <ToastContainer
+        pauseOnHover
+        theme="colored"
+        closeOnClick
+        autoClose={3000}
+        hideProgressBar={false}
+      />
       <Navbar />
       {isLoading && (
         <div className="loader-container">
