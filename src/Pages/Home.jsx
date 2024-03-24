@@ -8,7 +8,11 @@ const Home = () => {
   const disabledDays = [0, 6];
   const [attenenceData, setAttenenceData] = useState({
     "2024-2-19": true,
+    "2024-2-22": true,
+    "2024-2-7": true,
     "2024-2-20": false,
+    "2024-1-27": false,
+    "2024-2-12": false,
     "2024-2-21": null,
   });
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -116,7 +120,7 @@ const Home = () => {
             <button
               className="btn-primary"
               onClick={() => {
-                attenenceData[new Date()] = true;
+                attenenceData[convertToDate(new Date())] = true;
                 setAttendedToday(true);
               }}
             >
