@@ -260,3 +260,9 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+.page-main-svg {
+  width: 100%;
+  height: fit-content;
+  max-width: 200px;
+}

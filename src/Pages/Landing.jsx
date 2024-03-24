@@ -7,7 +7,7 @@ const Landing = () => {
   const { isLoading, setIsLoading } = useLoading();
   return (
     <div className="container-main landing-container center-a-container">
-      <img className="landing-welcome-logo" src={welcomeLogo} alt="Welcome" />
+      <img className="page-main-svg landing-welcome-logo" src={welcomeLogo} alt="Welcome" />
       <h2>Welcome to Attendence Portal</h2>
       <Link
         to="/login"
