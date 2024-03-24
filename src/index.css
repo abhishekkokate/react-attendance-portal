@@ -1,0 +1,170 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Variables */
+
+  --transition: all 0.25s ease;
+  --color-primary: #6c63ff;
+  --color-secondary: #5c54d9;
+  --color-text-light: #fff;
+  --color-dark-100: #131313dd;
+  --color-dark-400: #1a1a1a;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  padding: 0.5rem 1rem;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1ab7;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.btn-primary {
+  color: var(--color-text-light);
+  background: var(--color-primary);
+}
+
+.btn-primary:hover {
+  color: var(--color-text-light);
+  background: var(--color-secondary) !important;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Loader styles Start */
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-dark-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  height: 15px;
+  aspect-ratio: 4;
+  --_g: no-repeat
+    radial-gradient(farthest-side, var(--color-primary) 90%, #0000);
+  background: var(--_g) left, var(--_g) right;
+  background-size: 25% 100%;
+  display: grid;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  height: inherit;
+  aspect-ratio: 1;
+  grid-area: 1/1;
+  margin: auto;
+  border-radius: 50%;
+  transform-origin: -100% 50%;
+  background: var(--color-primary);
+  animation: l49 1s infinite linear;
+}
+.loader:after {
+  transform-origin: 200% 50%;
+  --s: -1;
+  animation-delay: -0.5s;
+}
+
+@keyframes l49 {
+  58%,
+  100% {
+    transform: rotate(calc(var(--s, 1) * 1turn));
+  }
+}
+
+/* Loder Styles End */
+
+/* Extra stylings */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  width: 100vw;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container-main {
+  padding-top: 50px;
+}
+
+.center-a-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
