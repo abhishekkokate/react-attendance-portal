@@ -1,9 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./layouts/Navbar";
-import Footer from "./layouts/Footer";
 import NotFound from "./pages/NotFound";
-import Calender from "./pages/Home";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import { useLoading } from "./contexts/LoadingContext";
@@ -32,7 +30,6 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      {/* <Footer /> */}
     </>
   );
 };
