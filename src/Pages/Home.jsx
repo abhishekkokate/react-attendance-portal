@@ -2,6 +2,7 @@ import Calendar from "react-calendar";
 import "../assets/styles/calender.css";
 import { useState, useRef, useEffect } from "react";
 import checkCircle from "../assets/icons/circle-check-solid.svg";
+import { toast } from "react-toastify";
 
 const Home = () => {
   // States and Variables
@@ -27,6 +28,12 @@ const Home = () => {
       console.error(err);
     }
     return date;
+  };
+
+  const markToday = () => {
+    attenenceData[convertToDate(new Date())] = true;
+    setAttendedToday(true);
+    toast.success("Attendance marked Successfully");
   };
 
   // Etc
@@ -117,13 +124,7 @@ const Home = () => {
         {isTodaySelected && !attendedToday && (
           <>
             <h4>Mark Attendance for Today: </h4>
-            <button
-              className="btn-primary"
-              onClick={() => {
-                attenenceData[convertToDate(new Date())] = true;
-                setAttendedToday(true);
-              }}
-            >
+            <button className="btn-primary" onClick={markToday}>
               Mark
             </button>
           </>
