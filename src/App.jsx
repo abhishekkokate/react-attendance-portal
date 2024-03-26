@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Navbar from "./layouts/Navbar.jsx";
-import NotFound from "./pages/NotFound.jsx";
-import Landing from "./pages/Landing.jsx";
-import Login from "./pages/Login.jsx";
-import { useLoading } from "./contexts/LoadingContext.jsx";
+import Home from "./pages/Home";
+import Navbar from "./layouts/Navbar";
+import NotFound from "./pages/NotFound";
+import Landing from "./pages/Landing";
+import Login from "./pages/Login";
+import { useLoading } from "./contexts/LoadingContext";
 import { ToastContainer } from "react-toastify";
 
 const App = () => {
