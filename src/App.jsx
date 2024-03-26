@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../src/pages/Home"; // `../src/` added because vercel was not able to relove paths when `./` was used
-import Navbar from "../srclayouts/Navbar";
-import NotFound from "../srcpages/NotFound";
-import Landing from "../srcpages/Landing";
-import Login from "../srcpages/Login";
-import { useLoading } from "../srccontexts/LoadingContext";
+import Home from "./pages/Home.jsx";
+import Navbar from "./layouts/Navbar.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import Landing from "./pages/Landing.jsx";
+import Login from "./pages/Login.jsx";
+import { useLoading } from "./contexts/LoadingContext.jsx";
 import { ToastContainer } from "react-toastify";
 
 const App = () => {
